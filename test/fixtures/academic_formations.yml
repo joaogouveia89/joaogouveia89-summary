@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  institution: MyString
+  start: 2022-01-09
+  end: 2022-01-09
+  title: MyString
+  : MyString
+
+two:
+  institution: MyString
+  start: 2022-01-09
+  end: 2022-01-09
+  title: MyString
+  : MyString

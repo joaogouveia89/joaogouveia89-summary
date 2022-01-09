@@ -7,8 +7,12 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import 'popper.js'
+import 'jquery'
 import "@fortawesome/fontawesome-free/css/all"
 import '../js/bootstrap_js_files.js'
+import '../js/aos.js'
+import '../js/creativecv.js'
 
 const images = require.context('../images', true)
 
