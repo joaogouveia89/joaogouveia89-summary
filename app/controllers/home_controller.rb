@@ -9,6 +9,7 @@ class HomeController < ApplicationController
   end
 
   private
+  
   def age
     birthdate = Date.new(1989,2,10)
     now = Time.now.utc.to_date
