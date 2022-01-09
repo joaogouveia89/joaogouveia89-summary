@@ -9,6 +9,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '../js/bootstrap_js_files.js'
 
+const images = require.context('../images', true)
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
