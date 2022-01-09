@@ -7,17 +7,13 @@
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About Me</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills Summary</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about"><%= t :about_me %></a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill"><%= t :skills_summary %></a></li>
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="#english">
-                        <img src="<%= image_path 'br.png' %>"/>
-                    </a>
+                    <%= link_to image_tag("br.png", border: 0), root_path(:locale => "ptBR"), class: "nav-link" %>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="#english">
-                        <img src="<%= image_path 'us.png' %>"/>
-                    </a>
+                    <%= link_to image_tag("us.png", border: 0), root_path, class: "nav-link" %>
                 </li>
             </ul>
         </div>

@@ -1,0 +1,10 @@
+ptBR:
+  age: "Idade"
+  about_me: "Sobre mim"
+  skills_summary: "Resumo das competências"
+  download_cv: "Download CV"
+  follow_me_on: "Siga-me no %{platform}"
+  basic_information: "Informações básicas"
+  email: "Email"
+  phone: "Telefone"
+  city: "Cidade atual"

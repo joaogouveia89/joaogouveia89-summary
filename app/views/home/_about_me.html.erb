@@ -4,33 +4,28 @@
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h3 mt-0 title">About</div>
-            <p>Hello! I am João Gouveia. Software Engineer.</p>
-            <p>Working on software development since 2014, from this year on, I have been working on web and mobile development technologies, mainly in Android native development. I dedicate my days to promoting a good work enviroment and help the team in whatever I can do.</p>
+            <div class="h3 mt-0 title"><%= t :about_me %></div>
+            <p><%= @description %></p>
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h3 mt-0 title">Basic Information</div>
+            <div class="h3 mt-0 title"><%= t :basic_information %></div>
             <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-              <div class="col-sm-8" id="agefield"></div>
+              <div class="col-sm-4"><strong class="text-uppercase"><%= t :age %>:</strong></div>
+              <div class="col-sm-8"><%= @age %></div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-              <div class="col-sm-8">j.lucas.gouveia@gmail.com</div>
+              <div class="col-sm-4"><strong class="text-uppercase"><%= t :email %>:</strong></div>
+              <div class="col-sm-8"><%= @email %></div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-              <div class="col-sm-8">+351 912 785 884</div>
+              <div class="col-sm-4"><strong class="text-uppercase"><%= t :phone %>:</strong></div>
+              <div class="col-sm-8"><%= @phone %></div>
             </div>
             <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">City:</strong></div>
-              <div class="col-sm-8">Lisbon - Portugal</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-              <div class="col-sm-8">Portuguese, English</div>
+              <div class="col-sm-4"><strong class="text-uppercase"><%= t :city %>:</strong></div>
+              <div class="col-sm-8"><%= @city %></div>
             </div>
           </div>
         </div>
