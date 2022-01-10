@@ -13,3 +13,4 @@ ptBR:
   english: "Inglês"
   first_language: "Primeira Lingua"
   fluency_all: "Fluente na escrita, leitura e fala"
+  years_and_months: "%{years} anos e %{months} meses"

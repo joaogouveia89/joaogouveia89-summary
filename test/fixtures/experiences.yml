@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  role: MyString
+  company: MyString
+  start: 2022-01-10
+  end: 2022-01-10
+  description: MyText
+  stack: MyString
+
+two:
+  role: MyString
+  company: MyString
+  start: 2022-01-10
+  end: 2022-01-10
+  description: MyText
+  stack: MyString

@@ -13,3 +13,4 @@ en:
   english: "English"
   first_language: "First language"
   fluency_all: "Fluent in Writing, Reading and Speaking"
+  years_and_months: "%{years} years and %{months} months"
