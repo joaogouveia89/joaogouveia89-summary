@@ -25,7 +25,7 @@ class HomeController < ApplicationController
           end
         end
 
-        # order skill set by time of experience and check the text format logic to not display 0 years or 0 months
+        @stack_xp = @stack_xp.sort_by {|_key, value| value}.reverse.to_h
       end
     end
   end
