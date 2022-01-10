@@ -41,9 +41,19 @@
  
      $navbar = $('.navbar[color-on-scroll]');
      scroll_distance = $navbar.attr('color-on-scroll') || 500;
+
+     //adding this code here to avoid the bug which happens when turbolinks reaload the content and the navbar gots set to transparent even if the scroll is out of profile
+     $(window).on('turbolinks:load', function(){
+        if ($(document).scrollTop() > scroll_distance) {
+            $('.navbar[color-on-scroll]').removeClass('navbar-transparent');
+        } else {
+            $('.navbar[color-on-scroll]').addClass('navbar-transparent');
+        }
+     });
+
  
      // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
- 
+     
      if ($('.navbar[color-on-scroll]').length != 0) {
          nowuiKit.checkScrollForTransparentNavbar();
          $(window).on('scroll', nowuiKit.checkScrollForTransparentNavbar)

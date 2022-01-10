@@ -2564,7 +2564,7 @@ textarea.form-control:focus, textarea.form-control:active {
   margin-top: 15px;
 }
 
-.progress-container .progress-badge {
+.progress-container .skill-badge {
   color: #888;
   font-size: 0.8571em;
   text-transform: uppercase;
@@ -2602,20 +2602,20 @@ textarea.form-control:focus, textarea.form-control:active {
 }
 
 .progress-container.progress-neutral .progress-value,
-.progress-container.progress-neutral .progress-badge {
+.progress-container.progress-neutral .skill-badge {
   color: #FFFFFF;
 }
 
-.progress-container.progress-primary .progress {
+.skill-container.skill-primary .progress {
   background: rgba(55, 140, 63, 0.4);
 }
 
-.progress-container.progress-primary .progress-bar {
+.skill-container.skill-primary .progress-bar {
   background: #378C3F;
 }
 
-.progress-container.progress-primary .progress-value,
-.progress-container.progress-primary .progress-badge {
+.skill-container.skill-primary .progress-value,
+.skill-container.skill-primary .skill-badge {
   color: #378C3F;
 }
 
@@ -2628,7 +2628,7 @@ textarea.form-control:focus, textarea.form-control:active {
 }
 
 .progress-container.progress-info .progress-value,
-.progress-container.progress-info .progress-badge {
+.progress-container.progress-info .skill-badge {
   color: #2CA8FF;
 }
 
@@ -2641,7 +2641,7 @@ textarea.form-control:focus, textarea.form-control:active {
 }
 
 .progress-container.progress-success .progress-value,
-.progress-container.progress-success .progress-badge {
+.progress-container.progress-success .skill-badge {
   color: #18ce0f;
 }
 
@@ -2654,7 +2654,7 @@ textarea.form-control:focus, textarea.form-control:active {
 }
 
 .progress-container.progress-warning .progress-value,
-.progress-container.progress-warning .progress-badge {
+.progress-container.progress-warning .skill-badge {
   color: #FFB236;
 }
 
@@ -2667,7 +2667,7 @@ textarea.form-control:focus, textarea.form-control:active {
 }
 
 .progress-container.progress-danger .progress-value,
-.progress-container.progress-danger .progress-badge {
+.progress-container.progress-danger .skill-badge {
   color: #FF3636;
 }
 
@@ -7146,31 +7146,14 @@ Roboto Web Font
 }
 
 /* Professional Skills Style */
-.progress-container {
+.skill-container {
   margin-bottom: 20px;
   font-size: 18px;
 }
 
-.progress-container .progress-bar {
-  height: 5px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 2s ease-in-out;
-  transition: -webkit-transform 2s ease-in-out;
-  transition: transform 2s ease-in-out;
-  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-}
-
-.progress-container .progress {
+.skill-container .skill {
   height: 5px;
   font-size: 18px;
-}
-
-.progress-container .aos-animate {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
 }
 
 /* Experience Style */

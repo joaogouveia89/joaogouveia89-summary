@@ -9,3 +9,7 @@ en:
   phone: "Phone"
   city: "Current city"
   speak_languages: "Languages"
+  portuguese: "Portuguese"
+  english: "English"
+  first_language: "First language"
+  fluency_all: "Fluent in Writing, Reading and Speaking"

@@ -9,3 +9,7 @@ ptBR:
   phone: "Telefone"
   city: "Cidade atual"
   speak_languages: "Línguas"
+  portuguese: "Português"
+  english: "Inglês"
+  first_language: "Primeira Lingua"
+  fluency_all: "Fluente na escrita, leitura e fala"
