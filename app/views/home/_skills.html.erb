@@ -1,71 +1,22 @@
 <div class="section" id="skill">
-	<div class="container">
-		<div class="h4 text-center mb-4 title"><%= t :skills_summary %></div>
-		<div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-			<div class="card-body">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="skill-container skill-primary container">
-							<div class="row">
-								<div class="col-6 text-center">
-									<span class="skill-badge">Android</span>
-								</div>
-								<div class="col-6">
-									<span class="skill-badge">3 years</span> 
-								</div>
+	<div class="container cc-experience text-center">
+		<div class="h3 text-center mb-4 title"><%= t :skills_summary %></div>
+			<% @stack_xp.each do |xp, months| %>
+				<div class="card custom_card_size">
+					<div class="row">
+						<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+							<div class="card-body cc-experience-header top80">
+								<div class="h5"><%= xp %></div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="skill-container skill-primary container">
-							<div class="row">
-								<div class="col-6 text-center">
-									<span class="skill-badge">Android</span>
-								</div>
-								<div class="col-6">
-									<span class="skill-badge">3 years</span> 
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="skill-container skill-primary container">
-							<div class="row">
-								<div class="col-6 text-center">
-									<span class="skill-badge">Android</span>
-								</div>
-								<div class="col-6">
-									<span class="skill-badge">3 years</span> 
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="skill-container skill-primary container">
-							<div class="row">
-								<div class="col-6 text-center">
-									<span class="skill-badge">Android</span>
-								</div>
-								<div class="col-6">
-									<span class="skill-badge">3 years</span> 
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="skill-container skill-primary container">
-							<div class="row">
-								<div class="col-6 text-center">
-									<span class="skill-badge">Android</span>
-								</div>
-								<div class="col-6">
-									<span class="skill-badge">3 years</span> 
-								</div>
+						<div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+							<div class="card-body text-center d-flex h-100 ">
+								<div class="h2 align-self-center text-center"><%= period_to_s(months) %></div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			<% end %>
 		</div>
 	</div>
 </div>

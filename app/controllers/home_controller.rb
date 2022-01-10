@@ -24,6 +24,8 @@ class HomeController < ApplicationController
             @stack_xp[skill_to_store] = xp_period
           end
         end
+
+        # order skill set by time of experience and check the text format logic to not display 0 years or 0 months
       end
     end
   end
