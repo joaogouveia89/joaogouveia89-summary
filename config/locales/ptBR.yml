@@ -21,3 +21,7 @@ ptBR:
   months: "%{months} meses"
   year: "1 ano"
   month: "1 mês"
+  generated_on: "Gerado em %{day}-%{month}-%{year}"
+  years_old: "%{age} anos"
+  date: "%{day}/%{month}/%{year}"
+  married: "Casado"

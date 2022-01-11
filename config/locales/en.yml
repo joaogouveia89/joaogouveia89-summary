@@ -21,3 +21,7 @@ en:
   months: "%{months} months"
   year: "1 year"
   month: "1 month"
+  generated_on: "Generated on %{year}-%{month}-%{day}"
+  years_old: "%{age} years old"
+  date: "%{year}-%{month}-%{day}"
+  married: "Married"
