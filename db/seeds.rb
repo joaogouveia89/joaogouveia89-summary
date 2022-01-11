@@ -5,6 +5,45 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+AboutMe.delete_all
+AcademicFormation.delete_all
+Experience.delete_all
+
+
+am = [
+    {
+        description: "{\"en\": \"Software engineer with experience in native Android development using both kotlin and java, and with several common libraries for development for the platform. I have a habit of optimizing my work by automating repetitive daily tasks, and using a personal checklist to manage my own to-do list.\", \"ptBR\":\"Engenheiro de software com experiência em desenvolvimento para Android nativo utilizando tanto kotlin quanto java, e com diversas bibliotecas comuns ao desenvolvimento para a plataforma. Tenho como hábito otimizar meu trabalho automatizando tarefas repetitivas do meu dia a dia, e utilizar um checklist pessoal para gerenciar minha própria lista de tarefas.\"}",
+        email: "j.lucas.gouveia@gmail.com",
+        phone: "+351 912 785 884",
+        current_city: "Lisboa - Portugal",
+        address: "Avenida Francisco Salgado Zenha, Lote 1, 7E"
+    }
+]
+
+AboutMe.create(am)
+
+af = [
+    {
+        institution: "Pontifícia Universidade Católica - PUC - MG",
+        start: Date.parse("2009-07-01"),
+        end: Date.parse("2014-06-01"),
+        title: "Engenharia de Controle e Automação",
+    },
+    {
+        institution: "Universidade Fumec",
+        start: Date.parse("2014-07-01"),
+        end: Date.parse("2018-12-01"),
+        title: "Ciência da Computação",
+    },
+    {
+        institution: "Udacity",
+        start: Date.parse("2021-05-01"),
+        end: Date.parse("2021-09-01"),
+        title: "C++ Nanodegree",
+    }
+]
+
+AcademicFormation.create(af)
 
 xps = [
     {
