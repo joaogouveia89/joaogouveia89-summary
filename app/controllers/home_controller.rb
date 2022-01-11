@@ -21,7 +21,7 @@ class HomeController < ApplicationController
     server_file_path = "#{Rails.root}/public/" + file_name
     
     # TODO implement a test to check this business rule of creating a pdf only if there is no file on server or the year or the month is different from the stored file
-    unless File.exist?(server_file_path ) || (File.mtime(server_file_path).year != Time.now.utc.to_date.year || File.mtime(server_file_path).month != Time.now.utc.to_date.month ) 
+    if !File.exist?(server_file_path) || (File.mtime(server_file_path).year != Time.now.utc.to_date.year || File.mtime(server_file_path).month != Time.now.utc.to_date.month)
       create_pdf server_file_path, I18n.locale
     end
     File.open(server_file_path, 'r') do |f|
@@ -73,7 +73,7 @@ class HomeController < ApplicationController
     xp_stack = compute_stack_xp experiences
     about_me = AboutMe.first
     now = Time.now.utc.to_date
-    profile_img = Rails.root.join("app", "assets", "images", "profile.jpeg").to_s
+    profile_img = Rails.root.join("app", "assets", "images", "profile.jpg").to_s
     line_spacing_header = 5
     line_spacing = 2
     line_spacing_big = 8
