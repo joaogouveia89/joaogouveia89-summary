@@ -24,4 +24,8 @@ en:
   generated_on: "Generated on %{year}-%{month}-%{day}"
   years_old: "%{age} years old"
   date: "%{year}-%{month}-%{day}"
+  date_period: "%{years}-%{months} to %{yeare}-%{monthe}"
+  date_period_current: "%{years}-%{months} - Current"
   married: "Married"
+  academic_formation: "Academic Formation"
+  experience: "Professional Experience"

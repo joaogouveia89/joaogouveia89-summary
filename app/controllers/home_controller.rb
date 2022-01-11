@@ -68,12 +68,15 @@ class HomeController < ApplicationController
 
   def create_pdf path, locale
     # getting_data
-    experiences = Experience.all
+    academic_formations = AcademicFormation.all
+    experiences = Experience.all.reverse
     xp_stack = compute_stack_xp experiences
     about_me = AboutMe.first
     now = Time.now.utc.to_date
     profile_img = Rails.root.join("app", "assets", "images", "profile.jpeg").to_s
     line_spacing_header = 5
+    line_spacing = 2
+    line_spacing_big = 8
 
     # starting pdf gen
     prawn = Prawn::Document.new
@@ -89,8 +92,39 @@ class HomeController < ApplicationController
     prawn.icon '<icon size="11" color="000000">fab-github</icon>' + '  <link href="https://www.github.com/joaogouveia89' '">' + "joaogouveia89"  + '</link>', size: 11, inline_format: true, leading: line_spacing_header
     prawn.icon '<icon size="11" color="000000">fab-skype</icon> joaoautomacaomg' , size: 11, inline_format: true, leading: line_spacing_header
     prawn.text "\n\n"
-    
-    
+    prawn.text "Software Engineer", align: :center, size: 26, style: :bold, leading: line_spacing_header
+    prawn.text "\n"
+    prawn.text JSON.parse(about_me.description)[locale.to_s], size: 14, leading: line_spacing
+    prawn.text "\n\n"
+    prawn.text I18n.t(:academic_formation), align: :center, size: 20, style: :bold
+    prawn.text "\n"
+    academic_formations.each do |af|
+      prawn.text af.institution, size: 14, style: :bold, leading: line_spacing
+      prawn.text af.title, size: 14, leading: line_spacing
+      prawn.text I18n.t(:date_period, years: af.start.year, months: ("%02d" % af.start.month).to_s, yeare: af.end.year, monthe: ("%02d" % af.end.month).to_s), size: 14, leading: line_spacing_big
+    end
+    prawn.start_new_page
+    prawn.text I18n.t(:speak_languages), align: :center, size: 20, style: :bold
+    prawn.text "\n"
+    prawn.text I18n.t(:portuguese), size: 14, style: :bold, leading: line_spacing
+    prawn.text I18n.t(:first_language), size: 14, leading: line_spacing_big
+    prawn.text I18n.t(:english), size: 14, style: :bold, leading: line_spacing
+    prawn.text I18n.t(:fluency_all), size: 14, leading: line_spacing_big
+    prawn.text "\n"
+    prawn.text I18n.t(:skills_summary), align: :center, size: 20, style: :bold 
+    prawn.text "\n"
+    xp_stack.each do |xp, time|
+      prawn.text (xp + " - " + helpers.period_to_s(time)), size: 14, leading: line_spacing
+    end
+    prawn.text "\n"
+    prawn.text I18n.t(:experience), align: :center, size: 20, style: :bold 
+    prawn.text "\n"
+    experiences.each do |exp|
+      prawn.text (exp.role[0] == '{' ? JSON.parse(exp.role)[locale.to_s] : exp.role) + " - " + (exp.company[0] == '{' ? JSON.parse(exp.company)[locale.to_s] : exp.company), size: 14, style: :bold, leading: line_spacing
+      prawn.text (exp.end == nil ? I18n.t(:date_period_current, years: exp.start.year, months: ("%02d" % exp.start.month).to_s) : I18n.t(:date_period, years: exp.start.year, months: ("%02d" % exp.start.month).to_s, yeare: exp.end.year, monthe: ("%02d" % exp.end.month).to_s)), size: 14, leading: line_spacing_big
+      prawn.text JSON.parse(exp.description)[locale.to_s], size: 12, leading: line_spacing
+      prawn.text "\n"
+    end
     prawn.render_file(path)
   end
 end

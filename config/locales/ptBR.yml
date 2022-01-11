@@ -24,4 +24,8 @@ ptBR:
   generated_on: "Gerado em %{day}-%{month}-%{year}"
   years_old: "%{age} anos"
   date: "%{day}/%{month}/%{year}"
+  date_period: "%{months}/%{years} à %{monthe}/%{yeare}"
+  date_period_current: "%{months}/%{years} - Atualmente"
   married: "Casado"
+  academic_formation: "Formação Acadêmica"
+  experience: "Experiencia Profissional"
