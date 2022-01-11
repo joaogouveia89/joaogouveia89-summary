@@ -12,7 +12,7 @@
           </div>
           <div class="h2 title">João Gouveia</div>
           <p class="category text-white">Software Engineer</p>
-          <a class="btn btn-primary" href="https://drive.google.com/file/d/1dzXmc8h1bH6bD_eNF8LIN_fgu1K-HBgj/view?usp=sharing" download target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor"><%= t :download_cv %></a>
+          <%= link_to t(:download_cv) , download_path(locale: I18n.locale.to_s), class: "btn btn-primary", target:"_blank" %>
         </div>
       </div>
       <div class="section">

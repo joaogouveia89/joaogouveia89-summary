@@ -1,3 +1,5 @@
+require 'prawn'
+
 class HomeController < ApplicationController
   def index
     about_me = AboutMe.first
@@ -6,14 +8,13 @@ class HomeController < ApplicationController
     @email = about_me.email
     @phone = about_me.phone
     @city = about_me.current_city
-    @stack_xp = {}
 
     experiences = Experience.all
 
     experiences.each do |xp|
       unless xp.stack == nil
         xp_period = date_diff(xp.start, xp.end)
-
+        @stack_xp = {}
         skill_set = xp.stack.split(",", -1)
 
         skill_set.each do |skill|
@@ -27,6 +28,22 @@ class HomeController < ApplicationController
 
         @stack_xp = @stack_xp.sort_by {|_key, value| value}.reverse.to_h
       end
+    end
+  end
+
+  # if makes sense in the future this file can be persisted in a storage at least for 1 month to avoid regeneration of it
+  def generate_pdf_resume
+    cur_locale = I18n.locale.to_s
+    file_name = "resume-" + cur_locale + ".pdf"
+    server_file_path = "#{Rails.root}/public/" + file_name
+    
+    unless File.exist? server_file_path
+      prawn = Prawn::Document.new
+      prawn.text(I18n.locale.to_s)
+      prawn.render_file(server_file_path)
+    end
+    File.open(server_file_path, 'r') do |f|
+      send_data f.read, filename: file_name, type: "application/pdf"
     end
   end
 
