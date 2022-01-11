@@ -83,6 +83,7 @@ GEM
     ffi (1.15.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    google-analytics-rails (1.1.1)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -215,6 +216,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  google-analytics-rails (= 1.1.1)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg

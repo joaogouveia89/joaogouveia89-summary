@@ -29,6 +29,8 @@ gem 'prawn'
 
 gem 'prawn-icon'
 
+gem 'google-analytics-rails', '1.1.1'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
