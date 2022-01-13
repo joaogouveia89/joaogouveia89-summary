@@ -10,6 +10,7 @@ import "channels"
 import 'popper.js'
 import 'jquery'
 import "@fortawesome/fontawesome-free/css/all"
+import AOS from 'aos';
 import '../js/bootstrap_js_files.js'
 import '../js/aos.js'
 import '../js/creativecv.js'
@@ -19,3 +20,9 @@ const images = require.context('../images', true)
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        startEvent: 'turbolinks:load' // if you are using turbolinks
+    });
+});

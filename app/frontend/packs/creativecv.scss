@@ -2556,120 +2556,71 @@ textarea.form-control:focus, textarea.form-control:active {
 }
 
 .progress-container {
-  position: relative;
-}
-
-.progress-container + .progress-container,
-.progress-container ~ .progress-container {
-  margin-top: 15px;
-}
-
-.progress-container .skill-badge {
-  color: #888;
-  font-size: 0.8571em;
-  text-transform: uppercase;
-}
-
-.progress-container .progress {
-  height: 1px;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: rgba(222, 222, 222, 0.8);
-  margin-top: 14px;
-}
-
-.progress-container .progress .progress-bar {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-color: #888;
-}
-
-.progress-container .progress .progress-value {
-  position: absolute;
-  top: 2px;
-  right: 0;
-  color: #888;
-  font-size: 0.8571em;
-}
-
-.progress-container.progress-neutral .progress {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.progress-container.progress-neutral .progress-bar {
-  background: #FFFFFF;
-}
-
-.progress-container.progress-neutral .progress-value,
-.progress-container.progress-neutral .skill-badge {
-  color: #FFFFFF;
-}
-
-.skill-container.skill-primary .progress {
-  background: rgba(55, 140, 63, 0.4);
-}
-
-.skill-container.skill-primary .progress-bar {
-  background: #378C3F;
-}
-
-.skill-container.skill-primary .progress-value,
-.skill-container.skill-primary .skill-badge {
-  color: #378C3F;
-}
-
-.progress-container.progress-info .progress {
-  background: rgba(44, 168, 255, 0.3);
-}
-
-.progress-container.progress-info .progress-bar {
-  background: #2CA8FF;
-}
-
-.progress-container.progress-info .progress-value,
-.progress-container.progress-info .skill-badge {
-  color: #2CA8FF;
-}
-
-.progress-container.progress-success .progress {
-  background: rgba(24, 206, 15, 0.3);
-}
-
-.progress-container.progress-success .progress-bar {
-  background: #18ce0f;
-}
-
-.progress-container.progress-success .progress-value,
-.progress-container.progress-success .skill-badge {
-  color: #18ce0f;
-}
-
-.progress-container.progress-warning .progress {
-  background: rgba(255, 178, 54, 0.3);
-}
-
-.progress-container.progress-warning .progress-bar {
-  background: #FFB236;
-}
-
-.progress-container.progress-warning .progress-value,
-.progress-container.progress-warning .skill-badge {
-  color: #FFB236;
-}
-
-.progress-container.progress-danger .progress {
-  background: rgba(255, 54, 54, 0.3);
-}
-
-.progress-container.progress-danger .progress-bar {
-  background: #FF3636;
-}
-
-.progress-container.progress-danger .progress-value,
-.progress-container.progress-danger .skill-badge {
-  color: #FF3636;
-}
+  position: relative; }
+  .progress-container + .progress-container,
+  .progress-container ~ .progress-container {
+    margin-top: 15px; }
+  .progress-container .progress-badge {
+    color: #888;
+    font-size: 0.8571em;
+    text-transform: uppercase; }
+  .progress-container .progress {
+    height: 1px;
+    border-radius: 0;
+    box-shadow: none;
+    background: rgba(222, 222, 222, 0.8);
+    margin-top: 14px; }
+    .progress-container .progress .progress-bar {
+      box-shadow: none;
+      background-color: #888; }
+    .progress-container .progress .progress-value {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      color: #888;
+      font-size: 0.8571em; }
+  .progress-container.progress-neutral .progress {
+    background: rgba(255, 255, 255, 0.3); }
+  .progress-container.progress-neutral .progress-bar {
+    background: #FFFFFF; }
+  .progress-container.progress-neutral .progress-value,
+  .progress-container.progress-neutral .progress-badge {
+    color: #FFFFFF; }
+  .progress-container.progress-primary .progress {
+    background: rgba(55, 140, 63, 0.4); }
+  .progress-container.progress-primary .progress-bar {
+    background: #378C3F; }
+  .progress-container.progress-primary .progress-value,
+  .progress-container.progress-primary .progress-badge {
+    color: #378C3F; }
+  .progress-container.progress-info .progress {
+    background: rgba(44, 168, 255, 0.3); }
+  .progress-container.progress-info .progress-bar {
+    background: #2CA8FF; }
+  .progress-container.progress-info .progress-value,
+  .progress-container.progress-info .progress-badge {
+    color: #2CA8FF; }
+  .progress-container.progress-success .progress {
+    background: rgba(24, 206, 15, 0.3); }
+  .progress-container.progress-success .progress-bar {
+    background: #18ce0f; }
+  .progress-container.progress-success .progress-value,
+  .progress-container.progress-success .progress-badge {
+    color: #18ce0f; }
+  .progress-container.progress-warning .progress {
+    background: rgba(255, 178, 54, 0.3); }
+  .progress-container.progress-warning .progress-bar {
+    background: #FFB236; }
+  .progress-container.progress-warning .progress-value,
+  .progress-container.progress-warning .progress-badge {
+    color: #FFB236; }
+  .progress-container.progress-danger .progress {
+    background: rgba(255, 54, 54, 0.3); }
+  .progress-container.progress-danger .progress-bar {
+    background: #FF3636; }
+  .progress-container.progress-danger .progress-value,
+  .progress-container.progress-danger .progress-badge {
+    color: #FF3636; }
 
 /*           badges             */
 .badge {
@@ -4636,29 +4587,19 @@ Roboto Web Font
   overflow: hidden;
   width: 100%;
   margin-bottom: 20px;
-  -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-}
-
-.card[data-background-color="orange"] {
-  background-color: #378C3F;
-}
-
-.card[data-background-color="red"] {
-  background-color: #FF3636;
-}
-
-.card[data-background-color="yellow"] {
-  background-color: #FFB236;
-}
-
-.card[data-background-color="blue"] {
-  background-color: #2CA8FF;
-}
-
-.card[data-background-color="green"] {
-  background-color: #18ce0f;
-}
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2); }
+  .card .card-body {
+    min-height: 190px; }
+  .card[data-background-color="orange"] {
+    background-color: #378C3F; }
+  .card[data-background-color="red"] {
+    background-color: #FF3636; }
+  .card[data-background-color="yellow"] {
+    background-color: #FFB236; }
+  .card[data-background-color="blue"] {
+    background-color: #2CA8FF; }
+  .card[data-background-color="green"] {
+    background-color: #18ce0f; }
 
 .card-signup {
   max-width: 350px;
@@ -5112,12 +5053,10 @@ Roboto Web Font
 .section {
   padding: 70px 0;
   position: relative;
-  background: #FFFFFF;
-}
-
+  background: #FFFFFF; }
 .section .row + .category {
-  margin-top: 15px;
-}
+    margin-top: 15px; }
+
 
 .section-navbars {
   padding-bottom: 0;
@@ -7142,15 +7081,19 @@ Roboto Web Font
 }
 
 /* Professional Skills Style */
-.skill-container {
+.progress-container {
   margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.skill-container .skill {
-  height: 5px;
-  font-size: 18px;
-}
+  font-size: 18px; }
+.progress-container .progress-bar {
+    height: 5px;
+    transform: scaleX(0);
+    transition: transform 2s ease-in-out;
+    transform-origin: 0% 0%; }
+.progress-container .progress {
+    height: 5px;
+    font-size: 18px; }
+.progress-container .aos-animate {
+    transform: scaleX(1); }
 
 /* Experience Style */
 .cc-experience .cc-experience-header {

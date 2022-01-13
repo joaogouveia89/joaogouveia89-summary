@@ -30,4 +30,8 @@ module HomeHelper
             end
         end
     end
+
+    def perc_xp(total_xp_years, experience_months)
+        ((experience_months * 100) / total_xp_years).to_i
+    end
 end

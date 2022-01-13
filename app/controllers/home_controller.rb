@@ -11,6 +11,8 @@ class HomeController < ApplicationController
 
     experiences = Experience.all
 
+    @total_xp_years = date_diff experiences.second.start
+
     @stack_xp = compute_stack_xp experiences
   end
 
@@ -58,7 +60,7 @@ class HomeController < ApplicationController
     return  now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
   end
 
-  def date_diff(dstart, dend)
+  def date_diff(dstart, dend = nil)
     if dend == nil
       dend = Time.now.utc.to_date
     end
