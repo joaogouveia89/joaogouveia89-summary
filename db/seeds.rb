@@ -95,8 +95,16 @@ xps = [
         role: 'Android engineer',
         company: 'Critical Techworks',
         start: "01-05-2019",
+        end: "01-11-2021",
         description: '{"en": "Worked in an Android application wrote in Kotlin, to handle Media operations using the MVVM pattern and Git for version control, in this project we consume external services like Spotify API, Apple Car play, also worked with internal storage media data(USB) and tuner external interface. This project is just a part of the platform for the future generation of BMW board computers, so I worked  alongside multiple teams in Portugal, Germany and China", "ptBR": "Trabalhei em um aplicativo Android escrito em Kotlin, para lidar com operações de mídia usando o padrão MVVM e Git para controle de versão, neste projeto consumimos serviços externos como Spotify API, Apple Car play, trabalhei também com dados de mídia de armazenamento interno (USB) e sintonizador interface externa. Este projeto é apenas uma parte da plataforma para a futura geração de computadores de bordo BMW, por isso trabalhei ao lado de várias equipas em Portugal, Alemanha e China"}',
         stack: "android,git,kotlin,mvvm,room,expresso,mockito,coroutines,live_data,media_session"
+    },
+    {
+        role: 'C++ Engineer',
+        company: 'Critical Techworks',
+        start: "01-11-2021",
+        description: '{"en": "Working in the Media application of BMW vehicles, alongside multiple teams around the world", "ptBR": "Trabalho no software de reprodução de mídia, juntamente com vários times ao redor do mundo"}',
+        stack: "c++"
     }
 ]
 
