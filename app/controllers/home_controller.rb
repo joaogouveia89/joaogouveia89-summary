@@ -21,7 +21,7 @@ class HomeController < ApplicationController
     cur_locale = I18n.locale.to_s
     file_name = "resume-" + cur_locale + ".pdf"
     server_file_path = "#{Rails.root}/public/" + file_name
-    
+
     # TODO implement a test to check this business rule of creating a pdf only if there is no file on server or the year or the month is different from the stored file
     if !File.exist?(server_file_path) || (File.mtime(server_file_path).year != Time.now.utc.to_date.year || File.mtime(server_file_path).month != Time.now.utc.to_date.month)
       create_pdf server_file_path, I18n.locale
@@ -71,7 +71,7 @@ class HomeController < ApplicationController
   def create_pdf path, locale
     # getting_data
     academic_formations = AcademicFormation.all
-    experiences = Experience.all.reverse
+    experiences = Experience.order(:start).reverse
     xp_stack = compute_stack_xp experiences
     about_me = AboutMe.first
     now = Time.now.utc.to_date
