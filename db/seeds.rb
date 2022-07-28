@@ -103,8 +103,16 @@ xps = [
         role: 'C++ Engineer',
         company: 'Critical Techworks',
         start: "01-11-2021",
+        end: "24-06-2022",
         description: '{"en": "Working in the Media application of BMW vehicles, alongside multiple teams around the world", "ptBR": "Trabalho no software de reprodução de mídia, juntamente com vários times ao redor do mundo"}',
         stack: "c++"
+    },
+    {
+        role: 'Mobile Engineer',
+        company: 'Bosch Portugal',
+        start: "27-06-2022",
+        description: '{"en": "Working in Refinemysite app using Kotlin Multiplatform for both, Android and IOS enviroments", "ptBR": "Trabalhando no aplicativo Refinemysite usando Kotlin Multiplatform para Android e IOS"}',
+        stack: "android,git,kotlin,mvvm,flow, kmm"
     }
 ]
 
